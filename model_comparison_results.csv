@@ -1,0 +1,5 @@
+Model,Accuracy,Precision (macro),Recall (macro),F1 (macro),SCAM Recall,SCAM Precision,SCAM F1
+Logistic Regression,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Linear SVM,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Naive Bayes,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Random Forest (TF-IDF + structured),1.0,1.0,1.0,1.0,1.0,1.0,1.0
