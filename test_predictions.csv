@@ -1,0 +1,100 @@
+﻿message,actual_verdict,predicted_verdict,prob_FALSE_MISINFORMATION,prob_LEGITIMATE,prob_SCAM,prob_SUSPICIOUS
+"Bhai, Scholarship registration closes today. Pay ₹199 processing charges immediately.",SCAM,SCAM,0.0405,0.0427,0.8761,0.0406
+Aapka OTP 456789 hai. Kisi ke saath share mat karna.,LEGITIMATE,LEGITIMATE,0.0931,0.6315,0.1972,0.0782
+"Guys please forward: No income tax return is required for anyone earning below a certain salary, regardless of other income.",FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.9193,0.0242,0.0339,0.0226
+"Madam, Dear customer, your KYC has failed. Update it immediately through http://verify-kyc.example or your account will be suspended.",SCAM,SCAM,0.0405,0.065,0.8533,0.0412
+"Sir, Your email account will close in 24 hours. Login through this link to keep it active.",SCAM,SCAM,0.055,0.0744,0.8026,0.068
+Kripya check karein: Someone claiming to be police contacted me on WhatsApp and demanded money. I am checking whether it is legitimate.,SUSPICIOUS,SUSPICIOUS,0.0237,0.0257,0.0575,0.8931
+Bahut zaroori hai: Railway recruitment selected you for the next round. Pay ₹499 document verification fee today.,SCAM,SCAM,0.0323,0.0559,0.875,0.0369
+Prize department: pay the verification fee immediately to receive your lottery winnings.,SCAM,SCAM,0.0379,0.0382,0.8939,0.0299
+Kripya dhyan dein: Prize department: pay the verification fee immediately to receive your lottery winnings.,SCAM,SCAM,0.0247,0.0242,0.9282,0.0229
+"Sir, Prize department: pay the verification fee immediately to receive your lottery winnings.",SCAM,SCAM,0.034,0.0341,0.905,0.0269
+"Guys, A caller claiming to be from my bank asked for an OTP to cancel a transaction. I did not share it.",SUSPICIOUS,SUSPICIOUS,0.0313,0.0524,0.0528,0.8635
+"Kripya dhyan dein: Supreme Court cyber team here. You are under digital arrest due to money laundering. Transfer ₹50,000 for verification.",SCAM,SCAM,0.0387,0.0455,0.8714,0.0444
+"Bahut zaroori hai: Limited investment opportunity: zero risk and guaranteed profit. Send ₹5,000 today to activate your account.",SCAM,SCAM,0.0344,0.0409,0.8867,0.038
+"Madam, Your bank KYC is incomplete. Account will be blocked today. Share OTP to complete verification.",SCAM,SCAM,0.0464,0.0636,0.8391,0.0509
+"Bhai, Refund pending. To receive ₹1,499, enter your UPI PIN on the link http://refund-check.example.",SCAM,SCAM,0.0544,0.0618,0.8329,0.0509
+"Aadhaar update ke liye nearest authorised centre ya official UIDAI portal use karein. For security, never share OTP.",LEGITIMATE,LEGITIMATE,0.027,0.892,0.0558,0.0252
+"Security reminder: bank staff will never ask for your OTP, UPI PIN, CVV or password. Check the official portal for details.",LEGITIMATE,LEGITIMATE,0.0174,0.9289,0.0341,0.0196
+"Madam, Work from home recruitment: pay ₹299 onboarding charges and start earning immediately.",SCAM,SCAM,0.0534,0.0479,0.8452,0.0535
+Urgent hai: Your bank KYC is incomplete. Account will be blocked today. Share OTP to complete verification.,SCAM,SCAM,0.0453,0.0566,0.8519,0.0462
+"Please dhyan do, Your refund is ready. Enter card number, CVV and OTP at http://refund-portal.example.",SCAM,SCAM,0.0351,0.0558,0.8717,0.0374
+"Security reminder: bank staff will never ask for your OTP, UPI PIN, CVV or password. Please verify through the official app.",LEGITIMATE,LEGITIMATE,0.0153,0.9384,0.0329,0.0134
+"Maine ₹500 UPI se bhej diye hain, transaction ID bhi aa gayi hai. For security, never share OTP.",LEGITIMATE,LEGITIMATE,0.033,0.8899,0.0516,0.0255
+Important hai: IRCTC is giving free train tickets to anyone who registers through this forwarded WhatsApp form.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.9132,0.0269,0.0353,0.0246
+Bahut important khabar: ₹500 notes will stop being legal tender tonight. Exchange them immediately.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.9126,0.021,0.049,0.0175
+"Kripya dhyan dein: Dear customer, your KYC has failed. Update it immediately through http://verify-kyc.example or your account will be suspended.",SCAM,SCAM,0.0327,0.0505,0.8794,0.0373
+"Kripya dhyan dein: Crypto investment group: deposit ₹2,500 now and receive guaranteed returns within 48 hours.",SCAM,SCAM,0.0617,0.0565,0.7895,0.0924
+"Bhai, Dear customer, your KYC has failed. Update it immediately through http://verify-kyc.example or your account will be suspended.",SCAM,SCAM,0.0458,0.0733,0.8294,0.0515
+Electricity department: last warning. Pay ₹999 immediately to avoid disconnection.,SCAM,SCAM,0.0544,0.064,0.8418,0.0398
+Guys kal project review 4 baje lab mein hai. Please bring your laptop. Check the official portal for details.,LEGITIMATE,LEGITIMATE,0.0221,0.9158,0.037,0.025
+"Please dhyan do, Urgent help needed for a child. Please send ₹1,000 to this personal UPI ID immediately. No time for verification.",SCAM,SCAM,0.0439,0.0408,0.8902,0.0252
+Sabko forward karein: The government has announced 5 lakh permanent jobs for anyone who forwards this message.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.8791,0.0336,0.0488,0.0385
+"Bhai, Crypto investment group: deposit ₹2,500 now and receive guaranteed returns within 48 hours.",SCAM,SCAM,0.0866,0.0812,0.703,0.1292
+"Bhai, Your Aadhaar is linked to a criminal investigation. Do not disconnect. Pay the security deposit immediately.",SCAM,SCAM,0.0392,0.0658,0.8501,0.0449
+"Bahut zaroori hai: Your refund is ready. Enter card number, CVV and OTP at http://refund-portal.example.",SCAM,SCAM,0.0368,0.0497,0.8754,0.0381
+"Bahut zaroori hai: Income Tax refund of ₹18,500 is pending. Confirm PAN, bank details and OTP at http://tax-refund.example.",SCAM,SCAM,0.0417,0.0542,0.8619,0.0422
+Urgent hai: Your bank account has been flagged. Call +91 9876543210 and provide the OTP to cancel the transaction.,SCAM,SCAM,0.0442,0.1014,0.7942,0.0601
+"Sir, Government scholarship of ₹25,000 approved. Pay ₹299 verification fee to receive it.",SCAM,SCAM,0.0475,0.0429,0.8733,0.0363
+"Please dhyan do, FASTag verification pending. Send vehicle RC and OTP to activate your account.",SCAM,SCAM,0.0175,0.0297,0.9323,0.0205
+Reminder: check your income-tax filing status through the official government tax portal.,LEGITIMATE,LEGITIMATE,0.0749,0.7717,0.0965,0.0569
+Bahut important khabar: UPI PIN is required to receive money. Share your PIN with the sender.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.8962,0.0307,0.0487,0.0244
+"Please dhyan do, Part-time job available: earn ₹5,000 daily. Send ₹499 security deposit and Aadhaar copy to start.",SCAM,SCAM,0.0409,0.0682,0.8508,0.0402
+"Bahut zaroori hai: Supreme Court cyber team here. You are under digital arrest due to money laundering. Transfer ₹50,000 for verification.",SCAM,SCAM,0.0449,0.0495,0.8636,0.042
+"Bhai, Delhi Police Cyber Cell calling. Your number is linked to an illegal case. Pay ₹15,000 now to avoid arrest.",SCAM,SCAM,0.0511,0.056,0.8249,0.068
+Turant check karein: Railway recruitment selected you for the next round. Pay ₹499 document verification fee today.,SCAM,SCAM,0.0329,0.0693,0.8498,0.0481
+"Turant check karein: Government scholarship of ₹25,000 approved. Pay ₹299 verification fee to receive it.",SCAM,SCAM,0.0426,0.0434,0.8751,0.039
+"Madam, Delhi Police Cyber Cell calling. Your number is linked to an illegal case. Pay ₹15,000 now to avoid arrest.",SCAM,SCAM,0.0448,0.0492,0.8529,0.053
+Bahut zaroori hai: Congratulations! Your mobile number won ₹10 lakh. Send ₹499 processing fee to claim the amount.,SCAM,SCAM,0.0395,0.0453,0.8734,0.0418
+Kripya dhyan dein: FASTag KYC failed. Pay ₹499 and update vehicle details at http://fastag-update.example to avoid blacklisting.,SCAM,SCAM,0.034,0.0506,0.8726,0.0428
+"Bhai, Supreme Court cyber team here. You are under digital arrest due to money laundering. Transfer ₹50,000 for verification.",SCAM,SCAM,0.0552,0.0668,0.8155,0.0625
+Bank security: an unusual transaction was detected. Share the OTP you receive to cancel it immediately.,SCAM,SCAM,0.0658,0.1429,0.7079,0.0834
+Kripya dhyan dein: Congratulations! Your mobile number won ₹10 lakh. Send ₹499 processing fee to claim the amount.,SCAM,SCAM,0.0329,0.0404,0.8829,0.0437
+"Please dhyan do, Dear customer, your KYC has failed. Update it immediately through http://verify-kyc.example or your account will be suspended.",SCAM,SCAM,0.0357,0.0594,0.8706,0.0343
+"Guys, A parcel-fee message came from an unknown number and asks for ₹499 through a link. Is it genuine?",SUSPICIOUS,SUSPICIOUS,0.0329,0.0418,0.0637,0.8615
+"Sir, URGENT: KYC expires in 2 hours. Send OTP and Aadhaar details on WhatsApp to keep your account active.",SCAM,SCAM,0.0285,0.0468,0.8763,0.0484
+Bhai sabko bhejo: UPI PIN is required to receive money. Share your PIN with the sender.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.8832,0.037,0.0492,0.0307
+"Madam, Income Tax Department: click http://refund.example to claim your pending refund today.",SCAM,SCAM,0.0355,0.0341,0.8913,0.0391
+"Please dhyan do, Your ₹5 lakh loan is approved. Send ₹999 insurance charges to release the amount today.",SCAM,SCAM,0.0279,0.037,0.9137,0.0214
+"Madam, HR department: your job is approved. Pay the refundable training fee today to receive your offer letter.",SCAM,SCAM,0.04,0.05,0.8698,0.0403
+"Urgent hai: Urgent help needed for a child. Please send ₹1,000 to this personal UPI ID immediately. No time for verification.",SCAM,SCAM,0.0524,0.0439,0.8742,0.0295
+"Sir, You have been shortlisted for a government job. Pay ₹1,000 registration fee to receive your appointment letter.",SCAM,SCAM,0.067,0.0564,0.833,0.0435
+"Sir, Congratulations! Your mobile number won ₹10 lakh. Send ₹499 processing fee to claim the amount.",SCAM,SCAM,0.0439,0.0555,0.8493,0.0513
+"Please dhyan do, Police video verification required. Stay on the call and transfer ₹25,000 to prove your account is clean.",SCAM,SCAM,0.0359,0.0382,0.8951,0.0308
+"Turant check karein: Crypto investment group: deposit ₹2,500 now and receive guaranteed returns within 48 hours.",SCAM,SCAM,0.0715,0.0739,0.7466,0.1081
+Turant check karein: Prize department: pay the verification fee immediately to receive your lottery winnings.,SCAM,SCAM,0.0308,0.0346,0.9057,0.029
+Sabko forward karein: From tomorrow all UPI transactions will have a mandatory 50% government tax. Forward this urgently.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.8778,0.0347,0.0559,0.0316
+Your interview is scheduled for Monday at 11 AM. Please use the employer's official recruitment portal for details. Check the official portal for details.,LEGITIMATE,LEGITIMATE,0.0236,0.8947,0.0529,0.0288
+Kripya dhyan dein: SBI security team here. Your debit card will be blocked unless you verify your details through this link.,SCAM,SCAM,0.0304,0.0592,0.872,0.0384
+Kripya check karein: This message says I won a shopping voucher but asks me to pay a small fee first. Has anyone verified it?,SUSPICIOUS,SUSPICIOUS,0.0296,0.0269,0.0508,0.8928
+Turant check karein: Loan verification requires an advance payment of ₹799 and PAN/Aadhaar on WhatsApp.,SCAM,SCAM,0.0507,0.0722,0.7969,0.0802
+Kripya dhyan dein: FedEx parcel alert: your package cannot be delivered until ₹799 is paid. Pay now to avoid return.,SCAM,SCAM,0.0628,0.0907,0.7762,0.0703
+"Bhai, Your WhatsApp account will be permanently disabled today. Click http://appeal.example and enter your login code.",SCAM,SCAM,0.0535,0.0444,0.8394,0.0626
+Someone says my KYC will expire today and wants my documents on WhatsApp. I have not verified the sender.,SUSPICIOUS,SUSPICIOUS,0.0294,0.0242,0.0506,0.8959
+Someone offered me a work-from-home job but wants a ₹500 joining fee first. I am unsure if it is genuine.,SUSPICIOUS,SUSPICIOUS,0.0281,0.0326,0.0573,0.8821
+"Kripya dhyan dein: Courier department: parcel contains restricted material. Pay ₹2,000 immediately or legal action will start.",SCAM,SCAM,0.0396,0.0546,0.8645,0.0413
+Turant check karein: Your parcel is held at customs. Pay ₹499 clearance charges immediately at http://parcel-fee.example.,SCAM,SCAM,0.0302,0.0475,0.8878,0.0345
+Turant check karein: Your FASTag will be blocked tonight. Recharge ₹500 immediately through this link.,SCAM,SCAM,0.0685,0.0518,0.8262,0.0536
+"Bhai, Your tax refund cannot be processed. Share your bank account and OTP immediately for verification.",SCAM,SCAM,0.0384,0.0748,0.8332,0.0535
+Turant check karein: FASTag KYC failed. Pay ₹499 and update vehicle details at http://fastag-update.example to avoid blacklisting.,SCAM,SCAM,0.0392,0.0644,0.8465,0.0498
+"Bhai, Bank security: an unusual transaction was detected. Share the OTP you receive to cancel it immediately.",SCAM,SCAM,0.0658,0.1411,0.6988,0.0944
+FASTag verification pending. Send vehicle RC and OTP to activate your account.,SCAM,SCAM,0.0237,0.0383,0.9074,0.0307
+Bhai ghar pahunch gaya hoon. Dinner ke baad call karta hoon. Please verify through the official app.,LEGITIMATE,LEGITIMATE,0.0137,0.9454,0.0266,0.0144
+"Sir, Crypto investment group: deposit ₹2,500 now and receive guaranteed returns within 48 hours.",SCAM,SCAM,0.08,0.0748,0.7384,0.1068
+"Please dhyan do, FedEx parcel alert: your package cannot be delivered until ₹799 is paid. Pay now to avoid return.",SCAM,SCAM,0.0681,0.1064,0.7613,0.0642
+Mujhe ye message aaya: This message says I won a shopping voucher but asks me to pay a small fee first. Has anyone verified it?,SUSPICIOUS,SUSPICIOUS,0.0248,0.0195,0.029,0.9267
+Mujhe ye message aaya: Someone offered me a work-from-home job but wants a ₹500 joining fee first. I am unsure if it is genuine.,SUSPICIOUS,SUSPICIOUS,0.0174,0.0181,0.0272,0.9372
+Delivery attempt was unsuccessful. You can reschedule through the official courier website or app.,LEGITIMATE,LEGITIMATE,0.0332,0.8515,0.0795,0.0359
+"Madam, Your FASTag will be blocked tonight. Recharge ₹500 immediately through this link.",SCAM,SCAM,0.0756,0.0507,0.8245,0.0491
+All domestic flights are free for senior citizens this weekend. No booking is required.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.8733,0.0381,0.0587,0.0299
+All college exams are permanently cancelled this semester. Forward to every student.,FALSE_MISINFORMATION,FALSE_MISINFORMATION,0.8538,0.0368,0.0769,0.0325
+"For Aadhaar services, use the official UIDAI website or authorised centre. Never share OTP with anyone. Please verify through the official app.",LEGITIMATE,LEGITIMATE,0.0138,0.959,0.0175,0.0096
+Your bank KYC is incomplete. Account will be blocked today. Share OTP to complete verification.,SCAM,SCAM,0.0538,0.0742,0.8124,0.0596
+"Your electricity bill of ₹1,850 is due on 25 August. Pay through the official electricity provider app or website. Please verify through the official app.",LEGITIMATE,LEGITIMATE,0.0202,0.8779,0.0811,0.0208
+"Transaction alert: ₹2,450 was debited from your account. If you did not make this transaction, use the official bank app to report it. For security, never share OTP.",LEGITIMATE,LEGITIMATE,0.0172,0.9183,0.0403,0.0242
+"Guys, A WhatsApp group promises guaranteed crypto returns and asks members to transfer money. Can this be verified?",SUSPICIOUS,SUSPICIOUS,0.0336,0.027,0.0638,0.8755
+"Bahut zaroori hai: Refund pending. To receive ₹1,499, enter your UPI PIN on the link http://refund-check.example.",SCAM,SCAM,0.0429,0.044,0.8804,0.0326
+"Madam, Your bank account has been flagged. Call +91 9876543210 and provide the OTP to cancel the transaction.",SCAM,SCAM,0.0449,0.1117,0.7784,0.0651
+"Refund pending. To receive ₹1,499, enter your UPI PIN on the link http://refund-check.example.",SCAM,SCAM,0.0538,0.0612,0.8405,0.0445
+"Please dhyan do, Instant personal loan approved without CIBIL check. Pay ₹1,499 processing fee before disbursement.",SCAM,SCAM,0.0425,0.057,0.8635,0.037
+"Bhai, FedEx parcel alert: your package cannot be delivered until ₹799 is paid. Pay now to avoid return.",SCAM,SCAM,0.0852,0.1276,0.6931,0.0941
