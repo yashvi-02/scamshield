@@ -5,7 +5,11 @@ from .routes.pdf import router as pdf_router
 from .routes.url import router as url_router
 from .routes.whatsapp import router as whatsapp_router
 from .routes.twilio import router as twilio_router
+from .routes.unified import router as unified_router
 app=FastAPI(title="ScamShield API")
+# Add alongside the other include_router lines:
+app.include_router(unified_router)
+
 app.include_router(pdf_router)
 app.include_router(url_router)
 app.include_router(message_router)
