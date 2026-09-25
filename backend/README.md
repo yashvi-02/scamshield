@@ -28,4 +28,14 @@ uvicorn app.main:app --reload
 
 4. Open `/db-health`. A successful response should show `status: connected`, database `scamshield_db`, user `postgres`, and port `5433`.
 
+## Detection endpoints
+
+The detection routes do not require a database connection:
+
+- `POST /api/v1/detect/message` with JSON `{ "message": "..." }`
+- `POST /api/v1/detect/url` with JSON `{ "url": "https://..." }`
+- `POST /api/v1/detect/pdf` with a multipart `file` upload
+
+PDF uploads are parsed server-side and analyzed without opening them in the user's browser. Text-based PDFs are supported up to 10 MB and 50 pages. Image-only PDFs require OCR before their text can be analyzed.
+
 No application tables are created yet. Models should be added only after the ScamShield data design is finalized.
