@@ -6,7 +6,33 @@ from scipy.sparse import hstack
 BASE_DIR = Path(__file__).resolve().parent
 VERDICT_MODEL_FILE = BASE_DIR / "logistic_regression_model.joblib"
 SCAM_TYPE_MODEL_FILE = BASE_DIR / "scam_type_model.joblib"
+# Add near the top of mod6.py:
+TRUSTED_DOMAINS = {
+    "onlinesbi.sbi", "sbi.co.in", "onlinesbi.com", "hdfcbank.com", "icicibank.com",
+    "axisbank.com", "pnbindia.in", "bankofbaroda.in", "canarabank.com", "rbi.org.in",
+    "npci.org.in", "gov.in", "nic.in", "uidai.gov.in", "incometax.gov.in",
+    "indiapost.gov.in", "epfindia.gov.in", "google.com", "paytm.com", "phonepe.com",
+    "amazon.in", "flipkart.com", "whatsapp.com",
+}
 
+def is_suspicious_url_found(text: str) -> bool:
+    found_urls = URL_PATTERN.findall(text)
+    if not found_urls:
+        return False
+    # If any discovered URL is NOT in our trusted domains list, flag as suspicious
+    for raw_u in found_urls:
+        clean = (
+            raw_u.lower()
+            .replace("https://", "")
+            .replace("http://", "")
+            .replace("www.", "")
+            .split("/")[0]
+            .split("?")[0]
+        )
+        is_trusted = any(clean == d or clean.endswith("." + d) for d in TRUSTED_DOMAINS)
+        if not is_trusted:
+            return True
+    return False
 # ---------------------------------------------------------------------------
 # BILINGUAL HEURISTIC PATTERNS
 # ---------------------------------------------------------------------------
@@ -100,7 +126,7 @@ def detect_indicators(message: str, metadata: dict = None) -> dict:
     metadata = metadata or {}
 
     indicators = {
-        "suspicious_url": bool(URL_PATTERN.search(message)),
+        "suspicious_url": is_suspicious_url_found(message),
         "phone_number": bool(PHONE_PATTERN.search(message)),
         "otp_request": bool(OTP_REQUEST_PATTERN.search(message)),
         "upi_pin_theft": bool(UPI_PIN_THEFT_PATTERN.search(message)),
