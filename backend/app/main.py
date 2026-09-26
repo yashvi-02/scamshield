@@ -14,7 +14,7 @@ app.include_router(pdf_router)
 app.include_router(url_router)
 app.include_router(message_router)
 app.include_router(whatsapp_router, prefix="/api/v1")
-app.include_router(twilio_router, prefix="/api/v1")
+app.include_router(twilio_router)
 @app.get("/")
 def home():
     return {"message":"ScamShield Backend is running"}
