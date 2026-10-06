@@ -2,23 +2,24 @@ from pathlib import Path
 from mod6 import analyze_message
 
 INDICATOR_EXPLANATIONS = {
-    "suspicious_url": "Contains an external or suspicious link",
+    "suspicious_url": "Contains a link to a domain that could not be verified as trusted",
     "phone_number": "Contains a phone number that may need verification",
     "otp_request": "Requests an OTP or verification code",
-    "upi_or_wallet": "Requests UPI or digital wallet information",
+    "upi_pin_theft": "Requests or attempts to obtain a UPI PIN",
+    "upi_app_mention": "Mentions a UPI or digital payment service",
     "money_request": "Requests money, payment, transfer, or recharge",
     "authority_impersonation": "Uses government, bank, police, or authority language",
     "urgent_language": "Creates urgency or pressure to act quickly",
     "credential_request": "Requests sensitive credentials or account information",
     "threat_or_consequence": "Uses a threat or consequence to pressure the recipient",
 }
-
 INDICATOR_ACTIONS = {
-    "suspicious_url": "Do not click the link",
+    "suspicious_url": "Do not click the link until the destination is independently verified",
     "phone_number": "Do not call an unverified number",
     "otp_request": "Do not share your OTP or verification code",
-    "upi_or_wallet": "Do not share your UPI PIN or wallet credentials",
-    "money_request": "Do not transfer money or make a payment",
+    "upi_pin_theft": "Never share your UPI PIN",
+    "upi_app_mention": "Verify any payment-related request independently",
+    "money_request": "Do not transfer money or make a payment until verified",
     "authority_impersonation": "Verify through the official organization website or application",
     "urgent_language": "Do not make a rushed decision",
     "credential_request": "Do not share passwords, PINs, CVV, or account details",
