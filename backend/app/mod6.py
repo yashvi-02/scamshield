@@ -2,6 +2,7 @@ from pathlib import Path
 import re
 import joblib
 from scipy.sparse import hstack
+from urllib.parse import urlparse
 
 BASE_DIR = Path(__file__).resolve().parent
 VERDICT_MODEL_FILE = BASE_DIR / "logistic_regression_model.joblib"
@@ -89,7 +90,7 @@ CONVERSATIONAL_PATTERNS = [
 ]
 
 INDICATOR_WEIGHTS = {
-    "suspicious_url": 15,
+    "suspicious_url": 5,
     "phone_number": 4,
     "otp_request": 20,
     "upi_pin_theft": 20,
@@ -115,25 +116,49 @@ def _bool(value) -> bool:
 
 
 def is_suspicious_url_found(text: str) -> bool:
-    """Returns True ONLY if an external URL does NOT belong to our trusted domains."""
+    """
+    Detects obviously malformed/deceptive URLs.
+
+    IMPORTANT:
+    An unknown domain is NOT automatically considered suspicious.
+    This prevents legitimate websites from being flagged simply because
+    they are not present in TRUSTED_DOMAINS.
+    """
     found_urls = URL_PATTERN.findall(text)
+
     if not found_urls:
         return False
-    for raw_u in found_urls:
-        clean = (
-            raw_u.lower()
-            .replace("https://", "")
-            .replace("http://", "")
-            .replace("www.", "")
-            .split("/")[0]
-            .split("?")[0]
-        )
-        is_trusted = any(clean == d or clean.endswith("." + d) for d in TRUSTED_DOMAINS)
-        if not is_trusted:
+
+    for raw_url in found_urls:
+        try:
+            url = raw_url.strip()
+
+            if not url.startswith(("http://", "https://")):
+                url = "https://" + url
+
+            parsed = urlparse(url)
+            hostname = parsed.hostname
+
+            # Malformed URL
+            if not hostname:
+                return True
+
+            hostname = hostname.lower().strip(".")
+
+            # Obvious URL deception:
+            # example:
+            # https://google.com@evil-site.com
+            if parsed.username or parsed.password:
+                return True
+
+            # Very unusual hostname structure
+            if hostname.count(".") > 5:
+                return True
+
+        except Exception:
             return True
+
     return False
-
-
 def detect_indicators(message: str, metadata: dict = None) -> dict:
     metadata = metadata or {}
 
@@ -151,13 +176,12 @@ def detect_indicators(message: str, metadata: dict = None) -> dict:
     }
 
     metadata_map = {
-        "contains_url": "suspicious_url",
-        "contains_phone": "phone_number",
-        "asks_for_otp": "otp_request",
-        "asks_for_upi_pin": "upi_pin_theft",
-        "asks_for_money": "money_request",
-        "impersonates_authority": "authority_impersonation",
-    }
+    "contains_phone": "phone_number",
+    "asks_for_otp": "otp_request",
+    "asks_for_upi_pin": "upi_pin_theft",
+    "asks_for_money": "money_request",
+    "impersonates_authority": "authority_impersonation",
+}
 
     for source, target in metadata_map.items():
         if source in metadata:
@@ -225,13 +249,12 @@ def analyze_message(message: str, metadata: dict = None) -> dict:
 
     # Hard scam signals that directly imply malice
     hard_scam_signals = [
-        indicators["otp_request"],
-        indicators["upi_pin_theft"],
-        indicators["credential_request"],
-        indicators["suspicious_url"],
-        (indicators["authority_impersonation"] and indicators["threat_or_consequence"]),
-        (indicators["threat_or_consequence"] and indicators["urgent_language"]),
-    ]
+    indicators["otp_request"],
+    indicators["upi_pin_theft"],
+    indicators["credential_request"],
+    (indicators["authority_impersonation"] and indicators["threat_or_consequence"]),
+    (indicators["threat_or_consequence"] and indicators["urgent_language"]),
+]
     has_hard_signal = any(hard_scam_signals)
     is_conv = is_conversational_context(clean_message)
 
